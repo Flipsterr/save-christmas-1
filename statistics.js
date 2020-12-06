@@ -1,23 +1,26 @@
+const array = [2,4,6]
+
 
 function max(arr) {
-    for (i = 0; i <= arr.length; i++){
-        if (arr [i] > arr [i+1]){
-            return arr [i]
-        }
-        else if(arr [i] < arr [i+1]){
-            return arr [i+1]
-        }
-    }
+    let raa = Math.max(...arr)
+     console.log(raa)
 }
 //håller på hitta en lösning tror dock att jag är hely ute o cyklar :)
 function min(arr) {
-
+    let ree = Math.min(...arr)
+    console.log(ree)
 }
 
 function mean(arr) {
-    // Ledtråd: Börja med att räkna ut summan av alla element
+    let sum = 0
+    for (i = 0; i < arr.length; i++) {
+        sum = sum + arr[i]
+        // arrayLength.push(arr[i])
+    }
+    return sum/arr.length
 }
 
-const array = [344, 1, 6, 5222, 22, 45]
 
-console.log(max(array))
+max(array)
+min(array)
+console.log(mean(array))
